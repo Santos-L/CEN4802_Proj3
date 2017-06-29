@@ -1,3 +1,9 @@
 C:\Users\Luis\Documents\School\OneDrive - Eastern Florida State College\Classwork\2017 - Summer\CEN4802\CEN4802_Proj3\CEN4802_Proj3\obj\Debug\CEN4802_Proj3.formMain.resources
 C:\Users\Luis\Documents\School\OneDrive - Eastern Florida State College\Classwork\2017 - Summer\CEN4802\CEN4802_Proj3\CEN4802_Proj3\obj\Debug\CEN4802_Proj3.Properties.Resources.resources
 C:\Users\Luis\Documents\School\OneDrive - Eastern Florida State College\Classwork\2017 - Summer\CEN4802\CEN4802_Proj3\CEN4802_Proj3\obj\Debug\CEN4802_Proj3.csproj.GenerateResource.Cache
+C:\Users\Luis\Documents\School\OneDrive - Eastern Florida State College\Classwork\2017 - Summer\CEN4802\CEN4802_Proj3\CEN4802_Proj3\bin\Debug\CEN4802_Proj3.exe.config
+C:\Users\Luis\Documents\School\OneDrive - Eastern Florida State College\Classwork\2017 - Summer\CEN4802\CEN4802_Proj3\CEN4802_Proj3\bin\Debug\CEN4802_Proj3.XML
+C:\Users\Luis\Documents\School\OneDrive - Eastern Florida State College\Classwork\2017 - Summer\CEN4802\CEN4802_Proj3\CEN4802_Proj3\bin\Debug\CEN4802_Proj3.exe
+C:\Users\Luis\Documents\School\OneDrive - Eastern Florida State College\Classwork\2017 - Summer\CEN4802\CEN4802_Proj3\CEN4802_Proj3\bin\Debug\CEN4802_Proj3.pdb
+C:\Users\Luis\Documents\School\OneDrive - Eastern Florida State College\Classwork\2017 - Summer\CEN4802\CEN4802_Proj3\CEN4802_Proj3\obj\Debug\CEN4802_Proj3.exe
+C:\Users\Luis\Documents\School\OneDrive - Eastern Florida State College\Classwork\2017 - Summer\CEN4802\CEN4802_Proj3\CEN4802_Proj3\obj\Debug\CEN4802_Proj3.pdb

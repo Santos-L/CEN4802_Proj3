@@ -44,6 +44,7 @@
             this.btnTwo = new System.Windows.Forms.Button();
             this.btnOne = new System.Windows.Forms.Button();
             this.btnPower = new System.Windows.Forms.Button();
+            this.lblHints = new System.Windows.Forms.Label();
             this.layoutButtonGrid.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -221,8 +222,8 @@
             // 
             // btnPower
             // 
-            this.btnPower.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPower.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPower.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPower.Location = new System.Drawing.Point(177, 328);
             this.btnPower.Name = "btnPower";
             this.btnPower.Size = new System.Drawing.Size(160, 55);
@@ -230,12 +231,24 @@
             this.btnPower.Text = "On/Off";
             this.btnPower.UseVisualStyleBackColor = true;
             // 
+            // lblHints
+            // 
+            this.lblHints.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHints.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHints.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblHints.Location = new System.Drawing.Point(6, 71);
+            this.lblHints.Name = "lblHints";
+            this.lblHints.Size = new System.Drawing.Size(331, 26);
+            this.lblHints.TabIndex = 6;
+            this.lblHints.Text = "Help messages/exceptions";
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(345, 386);
+            this.Controls.Add(this.lblHints);
             this.Controls.Add(this.btnPower);
             this.Controls.Add(this.layoutButtonGrid);
             this.Controls.Add(this.ouputTextBox);
@@ -267,6 +280,7 @@
         private System.Windows.Forms.Button btnTwo;
         private System.Windows.Forms.Button btnOne;
         private System.Windows.Forms.Button btnPower;
+        private System.Windows.Forms.Label lblHints;
     }
 }
 
