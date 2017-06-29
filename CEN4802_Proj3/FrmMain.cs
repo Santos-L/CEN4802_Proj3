@@ -21,5 +21,10 @@ namespace CEN4802_Proj3
         {
 
         }
+
+        private void btnEquals_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

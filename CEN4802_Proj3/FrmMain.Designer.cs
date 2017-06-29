@@ -29,181 +29,206 @@
         private void InitializeComponent()
         {
             this.btnEquals = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnOne = new System.Windows.Forms.Button();
-            this.btnTwo = new System.Windows.Forms.Button();
+            this.ouputTextBox = new System.Windows.Forms.RichTextBox();
+            this.layoutButtonGrid = new System.Windows.Forms.TableLayoutPanel();
+            this.btnMinus = new System.Windows.Forms.Button();
+            this.btnPlus = new System.Windows.Forms.Button();
+            this.btnZero = new System.Windows.Forms.Button();
+            this.btnNine = new System.Windows.Forms.Button();
+            this.btnEight = new System.Windows.Forms.Button();
+            this.btnSeven = new System.Windows.Forms.Button();
+            this.btnSix = new System.Windows.Forms.Button();
+            this.btnFive = new System.Windows.Forms.Button();
+            this.btnFour = new System.Windows.Forms.Button();
             this.btnThree = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.btnTwo = new System.Windows.Forms.Button();
+            this.btnOne = new System.Windows.Forms.Button();
+            this.btnPower = new System.Windows.Forms.Button();
+            this.layoutButtonGrid.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEquals
             // 
+            this.btnEquals.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEquals.Font = new System.Drawing.Font("Microsoft YaHei UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEquals.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEquals.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnEquals.Location = new System.Drawing.Point(6, 328);
             this.btnEquals.Name = "btnEquals";
-            this.btnEquals.Size = new System.Drawing.Size(330, 55);
+            this.btnEquals.Size = new System.Drawing.Size(160, 55);
             this.btnEquals.TabIndex = 0;
             this.btnEquals.Text = "=";
-            this.btnEquals.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnEquals.UseVisualStyleBackColor = true;
+            this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
             // 
-            // richTextBox1
+            // ouputTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(6, 6);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(329, 62);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.ouputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ouputTextBox.Location = new System.Drawing.Point(6, 6);
+            this.ouputTextBox.Name = "ouputTextBox";
+            this.ouputTextBox.Size = new System.Drawing.Size(329, 62);
+            this.ouputTextBox.TabIndex = 1;
+            this.ouputTextBox.Text = "";
             // 
-            // tableLayoutPanel1
+            // layoutButtonGrid
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.button13, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button12, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button11, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button10, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button9, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button8, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button7, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button6, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnThree, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnTwo, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnOne, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 78);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(329, 244);
-            this.tableLayoutPanel1.TabIndex = 4;
+            this.layoutButtonGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.layoutButtonGrid.ColumnCount = 3;
+            this.layoutButtonGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutButtonGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutButtonGrid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutButtonGrid.Controls.Add(this.btnMinus, 2, 3);
+            this.layoutButtonGrid.Controls.Add(this.btnPlus, 1, 3);
+            this.layoutButtonGrid.Controls.Add(this.btnZero, 0, 3);
+            this.layoutButtonGrid.Controls.Add(this.btnNine, 2, 2);
+            this.layoutButtonGrid.Controls.Add(this.btnEight, 1, 2);
+            this.layoutButtonGrid.Controls.Add(this.btnSeven, 0, 2);
+            this.layoutButtonGrid.Controls.Add(this.btnSix, 2, 1);
+            this.layoutButtonGrid.Controls.Add(this.btnFive, 1, 1);
+            this.layoutButtonGrid.Controls.Add(this.btnFour, 0, 1);
+            this.layoutButtonGrid.Controls.Add(this.btnThree, 2, 0);
+            this.layoutButtonGrid.Controls.Add(this.btnTwo, 1, 0);
+            this.layoutButtonGrid.Controls.Add(this.btnOne, 0, 0);
+            this.layoutButtonGrid.Location = new System.Drawing.Point(6, 100);
+            this.layoutButtonGrid.Name = "layoutButtonGrid";
+            this.layoutButtonGrid.RowCount = 4;
+            this.layoutButtonGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutButtonGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutButtonGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutButtonGrid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.layoutButtonGrid.Size = new System.Drawing.Size(329, 222);
+            this.layoutButtonGrid.TabIndex = 4;
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinus.Location = new System.Drawing.Point(221, 168);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(103, 51);
+            this.btnMinus.TabIndex = 11;
+            this.btnMinus.Text = "-";
+            this.btnMinus.UseVisualStyleBackColor = true;
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlus.Location = new System.Drawing.Point(112, 168);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(103, 51);
+            this.btnPlus.TabIndex = 10;
+            this.btnPlus.Text = "+";
+            this.btnPlus.UseVisualStyleBackColor = true;
+            // 
+            // btnZero
+            // 
+            this.btnZero.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnZero.Location = new System.Drawing.Point(3, 168);
+            this.btnZero.Name = "btnZero";
+            this.btnZero.Size = new System.Drawing.Size(103, 51);
+            this.btnZero.TabIndex = 9;
+            this.btnZero.Text = "0";
+            this.btnZero.UseVisualStyleBackColor = true;
+            // 
+            // btnNine
+            // 
+            this.btnNine.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNine.Location = new System.Drawing.Point(221, 113);
+            this.btnNine.Name = "btnNine";
+            this.btnNine.Size = new System.Drawing.Size(103, 49);
+            this.btnNine.TabIndex = 8;
+            this.btnNine.Text = "9";
+            this.btnNine.UseVisualStyleBackColor = true;
+            // 
+            // btnEight
+            // 
+            this.btnEight.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEight.Location = new System.Drawing.Point(112, 113);
+            this.btnEight.Name = "btnEight";
+            this.btnEight.Size = new System.Drawing.Size(103, 49);
+            this.btnEight.TabIndex = 7;
+            this.btnEight.Text = "8";
+            this.btnEight.UseVisualStyleBackColor = true;
+            // 
+            // btnSeven
+            // 
+            this.btnSeven.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeven.Location = new System.Drawing.Point(3, 113);
+            this.btnSeven.Name = "btnSeven";
+            this.btnSeven.Size = new System.Drawing.Size(103, 49);
+            this.btnSeven.TabIndex = 6;
+            this.btnSeven.Text = "7";
+            this.btnSeven.UseVisualStyleBackColor = true;
+            // 
+            // btnSix
+            // 
+            this.btnSix.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSix.Location = new System.Drawing.Point(221, 58);
+            this.btnSix.Name = "btnSix";
+            this.btnSix.Size = new System.Drawing.Size(103, 49);
+            this.btnSix.TabIndex = 5;
+            this.btnSix.Text = "6";
+            this.btnSix.UseVisualStyleBackColor = true;
+            // 
+            // btnFive
+            // 
+            this.btnFive.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFive.Location = new System.Drawing.Point(112, 58);
+            this.btnFive.Name = "btnFive";
+            this.btnFive.Size = new System.Drawing.Size(103, 49);
+            this.btnFive.TabIndex = 4;
+            this.btnFive.Text = "5";
+            this.btnFive.UseVisualStyleBackColor = true;
+            // 
+            // btnFour
+            // 
+            this.btnFour.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFour.Location = new System.Drawing.Point(3, 58);
+            this.btnFour.Name = "btnFour";
+            this.btnFour.Size = new System.Drawing.Size(103, 49);
+            this.btnFour.TabIndex = 3;
+            this.btnFour.Text = "4";
+            this.btnFour.UseVisualStyleBackColor = true;
+            // 
+            // btnThree
+            // 
+            this.btnThree.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThree.Location = new System.Drawing.Point(221, 3);
+            this.btnThree.Name = "btnThree";
+            this.btnThree.Size = new System.Drawing.Size(103, 49);
+            this.btnThree.TabIndex = 2;
+            this.btnThree.Text = "3";
+            this.btnThree.UseVisualStyleBackColor = true;
+            // 
+            // btnTwo
+            // 
+            this.btnTwo.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTwo.Location = new System.Drawing.Point(112, 3);
+            this.btnTwo.Name = "btnTwo";
+            this.btnTwo.Size = new System.Drawing.Size(103, 49);
+            this.btnTwo.TabIndex = 1;
+            this.btnTwo.Text = "2";
+            this.btnTwo.UseVisualStyleBackColor = true;
             // 
             // btnOne
             // 
             this.btnOne.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOne.Location = new System.Drawing.Point(3, 3);
             this.btnOne.Name = "btnOne";
-            this.btnOne.Size = new System.Drawing.Size(103, 55);
+            this.btnOne.Size = new System.Drawing.Size(103, 49);
             this.btnOne.TabIndex = 0;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
             // 
-            // btnTwo
+            // btnPower
             // 
-            this.btnTwo.Font = new System.Drawing.Font("Microsoft YaHei UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTwo.Location = new System.Drawing.Point(112, 3);
-            this.btnTwo.Name = "btnTwo";
-            this.btnTwo.Size = new System.Drawing.Size(103, 55);
-            this.btnTwo.TabIndex = 1;
-            this.btnTwo.Text = "2";
-            this.btnTwo.UseVisualStyleBackColor = true;
-            // 
-            // btnThree
-            // 
-            this.btnThree.Font = new System.Drawing.Font("Microsoft YaHei UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThree.Location = new System.Drawing.Point(221, 3);
-            this.btnThree.Name = "btnThree";
-            this.btnThree.Size = new System.Drawing.Size(103, 55);
-            this.btnThree.TabIndex = 2;
-            this.btnThree.Text = "3";
-            this.btnThree.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(3, 64);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(103, 55);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(112, 64);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(103, 55);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(221, 64);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(103, 55);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(3, 125);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(103, 55);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(112, 125);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(103, 55);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(221, 125);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(103, 55);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(3, 186);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(103, 55);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(112, 186);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(103, 55);
-            this.button12.TabIndex = 10;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(221, 186);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(103, 55);
-            this.button13.TabIndex = 11;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnPower.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPower.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPower.Location = new System.Drawing.Point(177, 328);
+            this.btnPower.Name = "btnPower";
+            this.btnPower.Size = new System.Drawing.Size(160, 55);
+            this.btnPower.TabIndex = 5;
+            this.btnPower.Text = "On/Off";
+            this.btnPower.UseVisualStyleBackColor = true;
             // 
             // formMain
             // 
@@ -211,14 +236,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(345, 386);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.btnPower);
+            this.Controls.Add(this.layoutButtonGrid);
+            this.Controls.Add(this.ouputTextBox);
             this.Controls.Add(this.btnEquals);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "formMain";
             this.Text = "CEN4802_Proj3";
             this.Load += new System.EventHandler(this.formMain_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.layoutButtonGrid.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -226,20 +252,21 @@
         #endregion
 
         private System.Windows.Forms.Button btnEquals;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.RichTextBox ouputTextBox;
+        private System.Windows.Forms.TableLayoutPanel layoutButtonGrid;
+        private System.Windows.Forms.Button btnMinus;
+        private System.Windows.Forms.Button btnPlus;
+        private System.Windows.Forms.Button btnZero;
+        private System.Windows.Forms.Button btnNine;
+        private System.Windows.Forms.Button btnEight;
+        private System.Windows.Forms.Button btnSeven;
+        private System.Windows.Forms.Button btnSix;
+        private System.Windows.Forms.Button btnFive;
+        private System.Windows.Forms.Button btnFour;
         private System.Windows.Forms.Button btnThree;
         private System.Windows.Forms.Button btnTwo;
         private System.Windows.Forms.Button btnOne;
+        private System.Windows.Forms.Button btnPower;
     }
 }
 
