@@ -16,7 +16,7 @@ namespace CEN4802_Proj3
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         //On/Off state
-        private bool power = false;
+        private bool power;
 
         public formMain()
         {
@@ -74,69 +74,69 @@ namespace CEN4802_Proj3
         #region Math Buttons
         private void btnEquals_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
         #endregion
 
         #region Number Buttons
         private void btnOne_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
 
         private void btnZero_Click(object sender, EventArgs e)
         {
-
+            //to be implemented later
         }
         #endregion
 
