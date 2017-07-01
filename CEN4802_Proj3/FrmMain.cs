@@ -12,11 +12,14 @@ namespace CEN4802_Proj3
 {
     public partial class formMain : Form
     {
-        //create logger
+        // create logger
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
-        //On/Off state
+        // On/Off state
         private bool power;
+
+        // error counts 
+        int windowFullCount = 0;
 
         public formMain()
         {
@@ -38,6 +41,7 @@ namespace CEN4802_Proj3
         }
 
         // power button toggles the power On/Off and logs the state
+        // Req 1)	The calculator shall have an On/Off button for power control.
         private void btnPower_Click(object sender, EventArgs e)
         { 
             // turn off if there is power
@@ -71,80 +75,49 @@ namespace CEN4802_Proj3
             this.power = !this.power;
         }
 
-        #region Math Buttons
+
         private void btnEquals_Click(object sender, EventArgs e)
         {
             //to be implemented later
         }
 
-        private void btnPlus_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
+        // event handler that sends text from selected number button to outputWindow if it isn't full
+        private void btnNum_Click(object sender, EventArgs e)
+        {   
+            // validate input
+            try
+            { 
+                if (outputTextBox.Text.Length >= outputTextBox.MaxLength)
+                {
+                    // Req 24)	The calculator shall output an error message if the result is too long to display in the window.
+                    lblHints.Text = "The input window is full!";
+                    throw new Exception();
+                }
+                else
+                {
+                    outputTextBox.Text += ((Button)sender).Text;
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error("Input has reached maximum length", ex);
+                windowFullCount++;
+
+                if (windowFullCount > 10)
+                {
+                    lblHints.Text = "Please stop";
+                }
+            }
         }
 
-        private void btnMinus_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-        #endregion
-
-        #region Number Buttons
-        private void btnOne_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-
-        private void btnTwo_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-
-        private void btnThree_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-
-        private void btnFour_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-
-        private void btnFive_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-
-        private void btnSix_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-
-        private void btnSeven_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-
-        private void btnEight_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-
-        private void btnNine_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-
-        private void btnZero_Click(object sender, EventArgs e)
-        {
-            //to be implemented later
-        }
-        #endregion
+        //
+        private void btnOperator_Click
 
         #region Methods
         private void powerOff()
         {
             lblHints.Text = "Press the power button";
-
+            outputTextBox.Text = "";
             ActiveForm.BackColor = Color.Black;
 
             this.btnOne.Enabled = false;
@@ -232,6 +205,28 @@ namespace CEN4802_Proj3
             this.btnEquals.Enabled = true;
             this.btnEquals.UseVisualStyleBackColor = true;
 
+        }
+
+        private bool lastInputWasOperator()
+        {
+            char lastInput = outputTextBox.Text[outputTextBox.Text.Length - 1];
+
+            if (lastInput == '+' || lastInput == '-')
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool startingWithAnOperator()
+        {
+            if (outputTextBox.Text.Length == 0)
+            {
+                outputTextBox.Text.Length == 0
+            }
         }
         #endregion
     }

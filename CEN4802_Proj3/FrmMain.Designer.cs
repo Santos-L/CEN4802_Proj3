@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnEquals = new System.Windows.Forms.Button();
-            this.ouputTextBox = new System.Windows.Forms.RichTextBox();
+            this.outputTextBox = new System.Windows.Forms.RichTextBox();
             this.layoutButtonGrid = new System.Windows.Forms.TableLayoutPanel();
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
@@ -50,7 +50,6 @@
             // 
             // btnEquals
             // 
-            // Req 6)	The calculator shall have an equals button to process the calculation.
             this.btnEquals.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEquals.Font = new System.Drawing.Font("Microsoft YaHei UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEquals.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -62,16 +61,20 @@
             this.btnEquals.UseVisualStyleBackColor = true;
             this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
             // 
-            // ouputTextBox
+            // outputTextBox
             // 
-            // Req 2)	The calculator shall have a window that shows the user’s input.
-            this.ouputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.outputTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ouputTextBox.Location = new System.Drawing.Point(6, 6);
-            this.ouputTextBox.Name = "ouputTextBox";
-            this.ouputTextBox.Size = new System.Drawing.Size(329, 62);
-            this.ouputTextBox.TabIndex = 1;
-            this.ouputTextBox.Text = "";
+            this.outputTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputTextBox.Location = new System.Drawing.Point(6, 6);
+            this.outputTextBox.MaxLength = 15;
+            this.outputTextBox.Multiline = false;
+            this.outputTextBox.Name = "outputTextBox";
+            this.outputTextBox.ReadOnly = true;
+            this.outputTextBox.Size = new System.Drawing.Size(329, 62);
+            this.outputTextBox.TabIndex = 1;
+            this.outputTextBox.Text = "";
+            this.outputTextBox.WordWrap = false;
             // 
             // layoutButtonGrid
             // 
@@ -104,7 +107,6 @@
             // 
             // btnMinus
             // 
-            // Req 4)	The calculator shall have a button for the subtraction operation.
             this.btnMinus.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinus.Location = new System.Drawing.Point(221, 168);
             this.btnMinus.Name = "btnMinus";
@@ -112,11 +114,10 @@
             this.btnMinus.TabIndex = 11;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+            this.btnMinus.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnPlus
             // 
-            // Req 5)	The calculator shall have a button for the addition operation.
             this.btnPlus.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlus.Location = new System.Drawing.Point(112, 168);
             this.btnPlus.Name = "btnPlus";
@@ -124,11 +125,10 @@
             this.btnPlus.TabIndex = 10;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            this.btnPlus.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnZero
             // 
-            // Req 16)	The calculator shall have a button to represent the number 0.
             this.btnZero.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZero.Location = new System.Drawing.Point(3, 168);
             this.btnZero.Name = "btnZero";
@@ -136,11 +136,10 @@
             this.btnZero.TabIndex = 9;
             this.btnZero.Text = "0";
             this.btnZero.UseVisualStyleBackColor = true;
-            this.btnZero.Click += new System.EventHandler(this.btnZero_Click);
+            this.btnZero.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnNine
             // 
-            // Req 15)	The calculator shall have a button to represent the number 9.
             this.btnNine.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNine.Location = new System.Drawing.Point(221, 113);
             this.btnNine.Name = "btnNine";
@@ -148,11 +147,10 @@
             this.btnNine.TabIndex = 8;
             this.btnNine.Text = "9";
             this.btnNine.UseVisualStyleBackColor = true;
-            this.btnNine.Click += new System.EventHandler(this.btnNine_Click);
+            this.btnNine.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnEight
             // 
-            // Req 14)	The calculator shall have a button to represent the number 8.
             this.btnEight.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEight.Location = new System.Drawing.Point(112, 113);
             this.btnEight.Name = "btnEight";
@@ -160,11 +158,10 @@
             this.btnEight.TabIndex = 7;
             this.btnEight.Text = "8";
             this.btnEight.UseVisualStyleBackColor = true;
-            this.btnEight.Click += new System.EventHandler(this.btnEight_Click);
+            this.btnEight.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnSeven
             // 
-            // Req 13)	The calculator shall have a button to represent the number 7.
             this.btnSeven.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeven.Location = new System.Drawing.Point(3, 113);
             this.btnSeven.Name = "btnSeven";
@@ -172,11 +169,10 @@
             this.btnSeven.TabIndex = 6;
             this.btnSeven.Text = "7";
             this.btnSeven.UseVisualStyleBackColor = true;
-            this.btnSeven.Click += new System.EventHandler(this.btnSeven_Click);
+            this.btnSeven.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnSix
             // 
-            // Req 12)	The calculator shall have a button to represent the number 6.
             this.btnSix.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSix.Location = new System.Drawing.Point(221, 58);
             this.btnSix.Name = "btnSix";
@@ -184,11 +180,10 @@
             this.btnSix.TabIndex = 5;
             this.btnSix.Text = "6";
             this.btnSix.UseVisualStyleBackColor = true;
-            this.btnSix.Click += new System.EventHandler(this.btnSix_Click);
+            this.btnSix.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnFive
             // 
-            // Req 11)	The calculator shall have a button to represent the number 5.
             this.btnFive.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFive.Location = new System.Drawing.Point(112, 58);
             this.btnFive.Name = "btnFive";
@@ -196,11 +191,10 @@
             this.btnFive.TabIndex = 4;
             this.btnFive.Text = "5";
             this.btnFive.UseVisualStyleBackColor = true;
-            this.btnFive.Click += new System.EventHandler(this.btnFive_Click);
+            this.btnFive.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnFour
             // 
-            // Req 10)	The calculator shall have a button to represent the number 4.
             this.btnFour.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFour.Location = new System.Drawing.Point(3, 58);
             this.btnFour.Name = "btnFour";
@@ -208,11 +202,10 @@
             this.btnFour.TabIndex = 3;
             this.btnFour.Text = "4";
             this.btnFour.UseVisualStyleBackColor = true;
-            this.btnFour.Click += new System.EventHandler(this.btnFour_Click);
+            this.btnFour.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnThree
             // 
-            // Req 9)	The calculator shall have a button to represent the number 3.
             this.btnThree.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThree.Location = new System.Drawing.Point(221, 3);
             this.btnThree.Name = "btnThree";
@@ -220,11 +213,10 @@
             this.btnThree.TabIndex = 2;
             this.btnThree.Text = "3";
             this.btnThree.UseVisualStyleBackColor = true;
-            this.btnThree.Click += new System.EventHandler(this.btnThree_Click);
+            this.btnThree.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnTwo
             // 
-            // Req 8)	The calculator shall have a button to represent the number 2.
             this.btnTwo.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTwo.Location = new System.Drawing.Point(112, 3);
             this.btnTwo.Name = "btnTwo";
@@ -232,11 +224,10 @@
             this.btnTwo.TabIndex = 1;
             this.btnTwo.Text = "2";
             this.btnTwo.UseVisualStyleBackColor = true;
-            this.btnTwo.Click += new System.EventHandler(this.btnTwo_Click);
+            this.btnTwo.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnOne
             // 
-            // Req 7)	The calculator shall have a button to represent the number 1.
             this.btnOne.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOne.Location = new System.Drawing.Point(3, 3);
             this.btnOne.Name = "btnOne";
@@ -244,11 +235,10 @@
             this.btnOne.TabIndex = 0;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
-            this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
+            this.btnOne.Click += new System.EventHandler(this.btnNum_Click);
             // 
             // btnPower
             // 
-            // Req 
             this.btnPower.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPower.Font = new System.Drawing.Font("Microsoft YaHei UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPower.Location = new System.Drawing.Point(177, 328);
@@ -279,7 +269,7 @@
             this.Controls.Add(this.lblHints);
             this.Controls.Add(this.btnPower);
             this.Controls.Add(this.layoutButtonGrid);
-            this.Controls.Add(this.ouputTextBox);
+            this.Controls.Add(this.outputTextBox);
             this.Controls.Add(this.btnEquals);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "formMain";
@@ -293,7 +283,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnEquals;
-        private System.Windows.Forms.RichTextBox ouputTextBox;
+        private System.Windows.Forms.RichTextBox outputTextBox;
         private System.Windows.Forms.TableLayoutPanel layoutButtonGrid;
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btnPlus;
