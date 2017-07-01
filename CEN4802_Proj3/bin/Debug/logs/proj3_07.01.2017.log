@@ -11,3 +11,56 @@
 2017-07-01 15:34:02,923 [9] INFO CEN4802_Proj3.formMain - Powering Off
 2017-07-01 15:34:03,988 [9] INFO CEN4802_Proj3.formMain - Powering On
 2017-07-01 15:34:04,890 [9] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 15:58:00,515 [9] INFO CEN4802_Proj3.formMain - Initializing
+2017-07-01 15:58:03,135 [9] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 15:58:05,584 [9] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 15:58:06,333 [9] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 15:58:07,477 [9] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 15:58:08,400 [9] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 15:58:09,677 [9] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 15:58:10,846 [9] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 15:58:11,576 [9] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:01:00,825 [9] INFO CEN4802_Proj3.formMain - Initializing
+2017-07-01 16:01:02,298 [9] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:01:58,466 [10] INFO CEN4802_Proj3.formMain - Initializing
+2017-07-01 16:01:59,569 [10] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:02:01,153 [10] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:02:02,033 [10] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:06:12,847 [8] INFO CEN4802_Proj3.formMain - Initializing
+2017-07-01 16:06:14,911 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:06:15,463 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:06:15,948 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:06:16,483 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:06:16,921 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:06:17,552 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:06:18,043 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:06:23,527 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:06:24,102 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:06:24,549 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:06:27,809 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:09:07,612 [9] INFO CEN4802_Proj3.formMain - Initializing
+2017-07-01 16:09:08,909 [9] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:09:09,505 [9] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:09:11,072 [9] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:09:12,555 [9] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:09:13,068 [9] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:09:13,557 [9] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:09:13,976 [9] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:09:14,414 [9] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:09:15,108 [9] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:10:09,644 [8] INFO CEN4802_Proj3.formMain - Initializing
+2017-07-01 16:10:12,134 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:10:14,982 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:10:16,857 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:11:00,536 [8] INFO CEN4802_Proj3.formMain - Initializing
+2017-07-01 16:11:02,480 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:11:03,362 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:11:04,052 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:11:04,657 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:11:05,240 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:11:05,800 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:11:06,332 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:11:06,846 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:11:07,366 [8] INFO CEN4802_Proj3.formMain - Powering On
+2017-07-01 16:11:08,745 [8] INFO CEN4802_Proj3.formMain - Powering Off
+2017-07-01 16:11:12,820 [8] INFO CEN4802_Proj3.formMain - Powering On
