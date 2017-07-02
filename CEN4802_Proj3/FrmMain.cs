@@ -21,6 +21,9 @@ namespace CEN4802_Proj3
 
         // used to reset outputWindow after a calculation
         private bool newCalculation;
+
+        // used to make sure an operator is used
+        private bool isAllNumbers = true;
         
         // error counts 
         private int windowFullCount;
@@ -85,12 +88,35 @@ namespace CEN4802_Proj3
 
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            //to be implemented later
+            powerOn();
+            newCalculation = true;
+
+            // Req 18)	The calculator shall not accept an input of just numbers.
+            if (isAllNumbers)
+            {
+                lblHints.Text = "Can't calculate on one number.";
+                outputTextBox.Text = "---------------";
+            }
+            else
+            {
+                // Req 25)	The calculator shall output the result to the same window used for input.
+                outputTextBox.Text = calcResult(outputTextBox.Text);
+                lblHints.Text = "Result displayed.";
+                log.Info("Result: " + outputTextBox.Text);
+            }
+            isAllNumbers = true;
         }
 
         // event handler that sends text from selected number button to outputWindow if it isn't full
         private void btnNum_Click(object sender, EventArgs e)
-        {   
+        {
+            // Req 26)	The calculator shall clear the output when a user starts another input.
+            if (newCalculation)
+            {
+                outputTextBox.Text = "";
+
+            }
+
             // validate input      
             if (outputFull())
             {
@@ -100,6 +126,8 @@ namespace CEN4802_Proj3
             {
                 outputTextBox.Text += ((Button)sender).Text;
                 operatorTryCount = 0;
+                powerOn();
+                newCalculation = false;
             }        
         }
 
@@ -133,11 +161,87 @@ namespace CEN4802_Proj3
                 outputTextBox.Text += ((Button)sender).Text;
             }
 
+            isAllNumbers = false;
         }
 
         #endregion
 
         #region Methods
+        // calculation
+        // Req 22)	The calculator shall perform the arithmetic operations request by an accepted input when the equals button is pressed.
+        private string calcResult(string input)
+        {
+            log.Info("Input: " + input);
+
+            long result = 0;
+            List<string> numbers = new List<string>() ;
+            List<char> orderOfoperations = new List<char>();
+
+            // extract numbers
+            log.Info("Trying to extract Numbers from input");
+            try
+            {
+                char[] operators = { '+', '-' };
+                numbers.AddRange(input.Split(operators));
+                log.Info("Numbers Extacted");
+            }
+            catch (Exception ex)
+            {
+                log.Error("Couldn't extract numbers from input", ex);
+            }
+
+            // extract operators
+            log.Info("Trying to extract Operators from input");
+            try
+            {
+                foreach (char c in input)
+                {
+                    if (c == '+' || c == '-')
+                    {
+                        orderOfoperations.Add(c);
+                    }
+                }
+                log.Info("Operators Extacted");
+            }
+            catch (Exception ex)
+            {
+                log.Error("Couldn't extract operators from input", ex);
+            }
+
+            // start with the first number
+            result += Int64.Parse(numbers[0]);
+
+            // modify it according to the input
+            log.Info("CalCULATING...");
+            try
+            {
+                for (int i = 1; i < numbers.Count; i++)
+                {
+
+                    switch (orderOfoperations[i - 1])
+                    {
+                        case '+':
+                            result += Int64.Parse(numbers[i]);
+                            break;
+                        case '-':
+                            result -= Int64.Parse(numbers[i]);
+                            break;
+                        default:
+                            log.Error("Invalid operator extracted");
+                            break;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error( "Could not calculate result.", ex);
+            }
+
+            return result.ToString();
+
+        }
+
         //power states
         private void powerOff()
         {
