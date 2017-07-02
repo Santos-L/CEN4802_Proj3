@@ -19,7 +19,7 @@ namespace CEN4802_Proj3
         private bool power;
 
         // error counts 
-        int windowFullCount = 0;
+        int windowFullCount;
 
         public formMain()
         {
@@ -91,7 +91,7 @@ namespace CEN4802_Proj3
                 // Req 24)	The calculator shall output an error message if the result is too long to display in the window.
                 lblHints.Text = "The input window is full!";
 
-                log.Error("Input has reached maximum length");
+                log.Info("Input has reached maximum length");
                 windowFullCount++;
 
                 if (windowFullCount > 10)
