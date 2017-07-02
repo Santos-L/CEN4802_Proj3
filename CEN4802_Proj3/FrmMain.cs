@@ -40,6 +40,7 @@ namespace CEN4802_Proj3
             }
         }
 
+        #region Button Event Handlers
         // power button toggles the power On/Off and logs the state
         // Req 1)	The calculator shall have an On/Off button for power control.
         private void btnPower_Click(object sender, EventArgs e)
@@ -84,23 +85,13 @@ namespace CEN4802_Proj3
         // event handler that sends text from selected number button to outputWindow if it isn't full
         private void btnNum_Click(object sender, EventArgs e)
         {   
-            // validate input
-            try
-            { 
-                if (outputTextBox.Text.Length >= outputTextBox.MaxLength)
-                {
-                    // Req 24)	The calculator shall output an error message if the result is too long to display in the window.
-                    lblHints.Text = "The input window is full!";
-                    throw new Exception();
-                }
-                else
-                {
-                    outputTextBox.Text += ((Button)sender).Text;
-                }
-            }
-            catch (Exception ex)
+            // validate input      
+            if (outputTextBox.Text.Length >= outputTextBox.MaxLength)
             {
-                log.Error("Input has reached maximum length", ex);
+                // Req 24)	The calculator shall output an error message if the result is too long to display in the window.
+                lblHints.Text = "The input window is full!";
+
+                log.Error("Input has reached maximum length");
                 windowFullCount++;
 
                 if (windowFullCount > 10)
@@ -108,10 +99,14 @@ namespace CEN4802_Proj3
                     lblHints.Text = "Please stop";
                 }
             }
+            else
+            {
+                outputTextBox.Text += ((Button)sender).Text;
+            }        
         }
 
-        //
-        private void btnOperator_Click
+
+        #endregion
 
         #region Methods
         private void powerOff()
@@ -225,8 +220,10 @@ namespace CEN4802_Proj3
         {
             if (outputTextBox.Text.Length == 0)
             {
-                outputTextBox.Text.Length == 0
+                return true;
             }
+
+            return false;
         }
         #endregion
     }
