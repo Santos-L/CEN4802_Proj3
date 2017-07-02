@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CEN4802_Proj3")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Write code based on Project 1's requirements")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CEN4802_Proj3")]
+[assembly: AssemblyCompany("Eastern Florida State College")]
+[assembly: AssemblyProduct("by Luis Santos")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -34,3 +34,7 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+
+//Load log4net config file
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config")]
