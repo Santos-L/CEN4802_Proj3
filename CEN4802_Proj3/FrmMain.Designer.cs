@@ -114,7 +114,7 @@
             this.btnMinus.TabIndex = 11;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
-            this.btnMinus.Click += new System.EventHandler(this.btnNum_Click);
+            this.btnMinus.Click += new System.EventHandler(this.btnOperator_Click);
             // 
             // btnPlus
             // 
@@ -125,7 +125,7 @@
             this.btnPlus.TabIndex = 10;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Click += new System.EventHandler(this.btnNum_Click);
+            this.btnPlus.Click += new System.EventHandler(this.btnOperator_Click);
             // 
             // btnZero
             // 

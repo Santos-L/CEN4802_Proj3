@@ -15,11 +15,17 @@ namespace CEN4802_Proj3
         // create logger
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        #region variables
         // On/Off state
         private bool power;
 
+        // used to reset outputWindow after a calculation
+        private bool newCalculation;
+        
         // error counts 
-        int windowFullCount;
+        private int windowFullCount;
+        private int operatorTryCount;
+        #endregion
 
         public formMain()
         {
@@ -86,29 +92,53 @@ namespace CEN4802_Proj3
         private void btnNum_Click(object sender, EventArgs e)
         {   
             // validate input      
-            if (outputTextBox.Text.Length >= outputTextBox.MaxLength)
+            if (outputFull())
             {
-                // Req 24)	The calculator shall output an error message if the result is too long to display in the window.
-                lblHints.Text = "The input window is full!";
-
-                log.Info("Input has reached maximum length");
-                windowFullCount++;
-
-                if (windowFullCount > 10)
-                {
-                    lblHints.Text = "Please stop";
-                }
+                outputFullWarning();
             }
             else
             {
                 outputTextBox.Text += ((Button)sender).Text;
+                operatorTryCount = 0;
             }        
         }
 
+        // event handler for the math buttons with extra checks
+        private void btnOperator_Click(object sender, EventArgs e)
+        {
+            if (outputFull())
+            {
+                outputFullWarning();
+            }
+            else if (startingWithAnOperator())
+            {
+                // Req 19)	The calculator shall not accept an input of just operators.
+                lblHints.Text = "Can't start with an operator!";
+                operatorTryCounter();
+
+            }
+            else if (lastInputWasOperator())
+            {
+                // Req 20)	The calculator shall not accept an input that contains sequential operators.
+                lblHints.Text = "Can't use two operators in a row!";
+                operatorTryCounter();
+            }
+            else if (endingWithAnOperator())
+            {
+                lblHints.Text = "Can't end with an operator!";
+                operatorTryCounter();
+            }
+            else
+            {
+                outputTextBox.Text += ((Button)sender).Text;
+            }
+
+        }
 
         #endregion
 
         #region Methods
+        //power states
         private void powerOff()
         {
             lblHints.Text = "Press the power button";
@@ -202,6 +232,100 @@ namespace CEN4802_Proj3
 
         }
 
+        // lblHints updators
+        private void outputFullWarning()
+        {
+            windowFullCount++;
+
+            switch  (windowFullCount)
+            {
+                case 1:
+                    log.Info("Input has reached maximum length");
+                    goto default;
+                case 10:
+                    lblHints.Text = "Please, stop.";
+                    break;
+                case 11:
+                    lblHints.Text = "This";
+                    break;
+                case 12:
+                    lblHints.Text = "is";
+                    break;
+                case 13:
+                    lblHints.Text = "madness!";
+                    break;
+                case 14:
+                    lblHints.Text = "Can't...";
+                    break;
+                case 15:
+                    lblHints.Text = "I can't take this anymore!";
+                    ActiveForm.BackColor = Color.Red;
+                    btnPower.Enabled = false;
+                    btnPlus.Enabled = false;
+                    btnMinus.Enabled = false;
+                    btnOne.Enabled = false;
+                    btnTwo.Enabled = false;
+                    btnThree.Enabled = false;
+                    btnFour.Enabled = false;
+                    btnFive.Enabled = false;
+                    btnSix.Enabled = false;
+                    btnSeven.Enabled = false;
+                    btnEight.Enabled = false;
+                    btnNine.Enabled = false;
+                    btnZero.Enabled = false;
+                    break;
+                default:
+                    // Req 24)	The calculator shall output an error message if the result is too long to display in the window.
+                    lblHints.Text = "The input window is full!";
+                    break;
+            }
+        }
+
+        private void operatorTryCounter()
+        {
+            operatorTryCount++;
+
+            switch (operatorTryCount)
+            {
+                case 1:
+                    log.Info("User tried to press two operators in a row");
+                    goto default;
+                case 10:
+                    lblHints.Text = "Seriously, you can't.";
+                    break;
+                case 11:
+                    lblHints.Text = "I mean't it.";
+                    break;
+                case 12:
+                    lblHints.Text = "Still trying?";
+                    break;
+                case 13:
+                    lblHints.Text = "Are you always like this?";
+                    break;
+                case 14:
+                    lblHints.Text = "Let me help you.";
+                    break;
+                case 15:
+                    lblHints.Text = "Press a number, please.";
+                    ActiveForm.BackColor = Color.Purple;
+                    btnEquals.Enabled = false;
+                    btnPower.Enabled = false;
+                    btnPlus.Enabled = false;
+                    btnMinus.Enabled = false;
+                    break;
+                default:
+                    // Req 20)	The calculator shall not accept an input that contains sequential operators.
+                    lblHints.Text = "Can't use two operators in a row!";
+                    break;
+            }
+        }
+
+        // boolean checks
+        private bool outputFull()
+        {
+            return outputTextBox.Text.Length >= outputTextBox.MaxLength;
+        }
+
         private bool lastInputWasOperator()
         {
             char lastInput = outputTextBox.Text[outputTextBox.Text.Length - 1];
@@ -218,12 +342,12 @@ namespace CEN4802_Proj3
 
         private bool startingWithAnOperator()
         {
-            if (outputTextBox.Text.Length == 0)
-            {
-                return true;
-            }
+            return outputTextBox.Text.Length == 0;
+        }
 
-            return false;
+        private bool endingWithAnOperator()
+        {
+            return outputTextBox.Text.Length == (outputTextBox.MaxLength - 1);
         }
         #endregion
     }
